@@ -1,7 +1,7 @@
 import axios from 'axios'
 import setAuthToken from '../../setAuthToken'
 
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'http://127.0.0.1:8000'
 
 const state = {
     token: localStorage.getItem('auth_token')? localStorage.getItem('auth_token') : null,
