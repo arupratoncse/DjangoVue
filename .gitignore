@@ -21,3 +21,4 @@ leadmanager/.idea
 *.njsproj
 *.sln
 *.sw?
+*.sqlite3
