@@ -24,7 +24,7 @@ const getters = {
 
 const actions = {
   loadPages({commit}){
-    axios.get(`${BASE_URL}/api/note`)
+    axios.get(`${BASE_URL}/api/note/`)
         .then(res => {
           console.log(res.data)
           commit('notesLoaded', res.data)
@@ -47,7 +47,7 @@ const actions = {
     if (!state.selectedNote.title || !state.selectedNote.content) {
       return
     }
-    axios.post(`${BASE_URL}/api/note`, state.selectedNote)
+    axios.post(`${BASE_URL}/api/note/`, state.selectedNote)
     .then((instance) => {
       console.log(instance)
       Object.assign(state.selectedNote, instance)
